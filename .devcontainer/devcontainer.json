@@ -25,7 +25,20 @@
 
 	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
 	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
-	// "appPort": [],
+	// "appPort": [], 
+
+	"forwardPorts": [
+		3500, 	// React app - Dapr
+		3501, 	// Python app - Dapr
+		3502, 	// Node app - Dapr
+		3503, 	// Go app - Dapr
+		3504, 	// C# app - Dapr
+		4000, 	// Node app - Native
+		5000, 	// Python app - Native
+		6000, 	// Go app - Native
+		7000, 	// C# app - Native
+		8080  	// React - Native
+	],
 	
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
@@ -39,6 +52,7 @@
 		"visualstudioexptteam.vscodeintellicode",
 		"davidanson.vscode-markdownlint",
 		"ms-mssql.mssql",
-		"golang.go"
+		"golang.go",
+		"ms-python.python"
 	]
 }

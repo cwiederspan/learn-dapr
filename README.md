@@ -11,10 +11,10 @@ cd src/go/
 go get -u github.com/gorilla/mux
 
 # Build the app
-go build -o app app.go
+go build app.go
 
 # Run the app with Dapr
-dapr run --app-id addapp --app-port 6000 --port 3503 --components-path ../components app
+dapr run --app-id addapp --app-port 6000 --port 3503 --components-path ../components ./app
 
 # Check the result through Dapr's CLI interface
 dapr invokePost -a addapp -m add -p '{ "operandOne": "6", "operandTwo": "7" }'
