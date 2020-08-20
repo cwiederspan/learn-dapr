@@ -37,7 +37,8 @@
 		5000, 	// Python app - Native
 		6000, 	// Go app - Native
 		7000, 	// C# app - Native
-		8080  	// React - Native
+		8080, 	// React - Native
+		7700    // Native C# App (No Dapr)
 	],
 	
 	// Add the IDs of extensions you want installed when the container is created in the array below.
